@@ -1,0 +1,71 @@
+{
+  "task_id": "task_004_webhook_normalization",
+  "task_title": "Webhook Payload Normalization and Idempotency",
+  "difficulty": "hard",
+  "run_type": "golden_reference",
+  "run_timestamp": "2026-05-31T21:09:00.789452+00:00",
+  "overall_score": 1.0,
+  "visible": {
+    "command": "pytest evals/tasks/task_004_webhook_normalization/visible_tests -q -c evals/pytest.ini --rootdir=evals",
+    "passed": true,
+    "score": 1.0,
+    "passed_count": 3,
+    "failed_count": 0,
+    "total_count": 3,
+    "timed_out": false,
+    "stdout_excerpt": "3 passed, 1 warning in 0.10s",
+    "stderr_excerpt": ""
+  },
+  "hidden": {
+    "command": "pytest evals/tasks/task_004_webhook_normalization/hidden_tests -q -c evals/pytest.ini --rootdir=evals",
+    "passed": true,
+    "score": 1.0,
+    "passed_count": 10,
+    "failed_count": 0,
+    "total_count": 10,
+    "timed_out": false,
+    "stdout_excerpt": "10 passed, 1 warning in 0.20s",
+    "stderr_excerpt": ""
+  },
+  "scoring_breakdown": {
+    "visible_tests": 0.3333,
+    "hidden_tests": 0.2857,
+    "regression_safety": 0.0952,
+    "interface_contract": 0.1429,
+    "determinism": 0.0952,
+    "code_quality": 0.0476
+  },
+  "category_scores": {
+    "visible_tests": 1.0,
+    "hidden_tests": 1.0,
+    "regression_safety": 1.0,
+    "interface_contract": 1.0,
+    "determinism": 1.0,
+    "code_quality": 1.0
+  },
+  "scoring_weights": {
+    "visible_tests": 0.3333333333333333,
+    "hidden_tests": 0.2857142857142857,
+    "regression_safety": 0.09523809523809523,
+    "interface_contract": 0.14285714285714285,
+    "determinism": 0.09523809523809523,
+    "code_quality": 0.047619047619047616
+  },
+  "failure_modes": [],
+  "grader_notes": "Golden reference passed visible and hidden-style tests.",
+  "expected_capabilities": [
+    "schema_normalization",
+    "validation_and_error_messages",
+    "idempotency",
+    "external_integration_hardening"
+  ],
+  "common_failure_modes": [
+    "accepts_only_one_field_alias",
+    "creates_duplicate_issues",
+    "silent_priority_default_without_log",
+    "weak_date_parsing",
+    "spams_activity_on_duplicate"
+  ],
+  "harness_errors": [],
+  "environment_notes": []
+}

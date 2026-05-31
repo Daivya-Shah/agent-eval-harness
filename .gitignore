@@ -1,0 +1,45 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+dist/
+build/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Python test caches
+.pytest_cache/
+evals/.pytest_cache/
+
+# Node / frontend
+node_modules/
+apps/issueflow-frontend/dist/
+apps/issueflow-frontend/.vite/
+evals/tasks/**/.vite/
+
+# Playwright / Vitest artifacts
+apps/issueflow-frontend/test-results/
+apps/issueflow-frontend/playwright-report/
+apps/issueflow-frontend/blob-report/
+
+# SQLite databases (local dev)
+*.db
+apps/issueflow-backend/issueflow.db
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+*.log

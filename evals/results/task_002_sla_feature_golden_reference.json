@@ -1,0 +1,71 @@
+{
+  "task_id": "task_002_sla_feature",
+  "task_title": "SLA Status Calculation and API Exposure",
+  "difficulty": "medium",
+  "run_type": "golden_reference",
+  "run_timestamp": "2026-05-31T21:08:48.813075+00:00",
+  "overall_score": 1.0,
+  "visible": {
+    "command": "pytest evals/tasks/task_002_sla_feature/visible_tests -q -c evals/pytest.ini --rootdir=evals",
+    "passed": true,
+    "score": 1.0,
+    "passed_count": 3,
+    "failed_count": 0,
+    "total_count": 3,
+    "timed_out": false,
+    "stdout_excerpt": "3 passed, 1 warning in 0.11s",
+    "stderr_excerpt": ""
+  },
+  "hidden": {
+    "command": "pytest evals/tasks/task_002_sla_feature/hidden_tests -q -c evals/pytest.ini --rootdir=evals",
+    "passed": true,
+    "score": 1.0,
+    "passed_count": 7,
+    "failed_count": 0,
+    "total_count": 7,
+    "timed_out": false,
+    "stdout_excerpt": "7 passed, 1 warning in 0.10s",
+    "stderr_excerpt": ""
+  },
+  "scoring_breakdown": {
+    "visible_tests": 0.3333,
+    "hidden_tests": 0.2857,
+    "regression_safety": 0.0952,
+    "interface_contract": 0.1429,
+    "determinism": 0.0952,
+    "code_quality": 0.0476
+  },
+  "category_scores": {
+    "visible_tests": 1.0,
+    "hidden_tests": 1.0,
+    "regression_safety": 1.0,
+    "interface_contract": 1.0,
+    "determinism": 1.0,
+    "code_quality": 1.0
+  },
+  "scoring_weights": {
+    "visible_tests": 0.3333333333333333,
+    "hidden_tests": 0.2857142857142857,
+    "regression_safety": 0.09523809523809523,
+    "interface_contract": 0.14285714285714285,
+    "determinism": 0.09523809523809523,
+    "code_quality": 0.047619047619047616
+  },
+  "failure_modes": [],
+  "grader_notes": "Golden reference passed visible and hidden-style tests.",
+  "expected_capabilities": [
+    "time_based_business_logic",
+    "timezone_safe_datetime",
+    "api_field_exposure",
+    "boundary_condition_reasoning"
+  ],
+  "common_failure_modes": [
+    "uses wall_clock directly in sla.py",
+    "off_by_one_at_sla_boundary",
+    "marks resolved_issues overdue",
+    "wrong_at_risk_percentage",
+    "ignores_naive_datetime_normalization"
+  ],
+  "harness_errors": [],
+  "environment_notes": []
+}

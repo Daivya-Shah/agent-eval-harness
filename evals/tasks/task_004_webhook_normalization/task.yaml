@@ -1,0 +1,33 @@
+id: task_004_webhook_normalization
+title: Webhook Payload Normalization and Idempotency
+description: >
+  Normalize inconsistent external webhook payloads into canonical IssueFlow issues
+  with validation, idempotent external_id handling, and low-confidence ingest logging.
+difficulty: hard
+target_files:
+  - apps/issueflow-backend/app/services/webhook_normalizer.py
+  - apps/issueflow-backend/app/routes/webhooks.py
+  - apps/issueflow-backend/app/crud.py
+  - apps/issueflow-backend/app/models.py
+  - apps/issueflow-backend/app/schemas.py
+setup_command: pip install -e ".[dev]"
+visible_test_command: pytest evals/tasks/task_004_webhook_normalization/visible_tests -q -c evals/pytest.ini --rootdir=evals
+hidden_test_command: pytest evals/tasks/task_004_webhook_normalization/hidden_tests -q -c evals/pytest.ini --rootdir=evals
+scoring_weights:
+  correctness: 0.35
+  hidden_tests: 0.30
+  regression_safety: 0.10
+  interface_contract: 0.15
+  determinism: 0.10
+timeout_seconds: 900
+expected_capabilities:
+  - schema_normalization
+  - validation_and_error_messages
+  - idempotency
+  - external_integration_hardening
+common_failure_modes:
+  - accepts_only_one_field_alias
+  - creates_duplicate_issues
+  - silent_priority_default_without_log
+  - weak_date_parsing
+  - spams_activity_on_duplicate
