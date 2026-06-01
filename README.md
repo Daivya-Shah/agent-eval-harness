@@ -1,6 +1,6 @@
 # Agent Eval Harness (Mechanize)
 
-Built as a demo project for [Mechanize](https://www.mechanize.work/) because I really love what y’all are building.
+Built as a demo project for [Mechanize](https://www.mechanize.work/) because I really love what y’all are building!
 
 I wanted to make something that gets close to the kind of work your team seems to care about. Not just building another AI app, but designing a real software environment where coding agents can be tested, graded, and understood.
 
