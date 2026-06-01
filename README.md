@@ -1,6 +1,6 @@
 # Agent Eval Harness
 
-Built as a demo project for [Mechanize](https://www.mechanize.work/) because I really love what y’all are building.
+Built as a demo project for [Mechanize](https://www.mechanize.work/) because I really love what y’all are building!
 
 This is a small eval harness for coding agents, built around **IssueFlow**, a full-stack issue tracker (FastAPI + SQLite, React on the front) that acts as the real codebase agents edit. The tasks are scoped to normal backend, frontend, and integration work, not one-off puzzle files.
 
