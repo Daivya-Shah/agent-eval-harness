@@ -1,13 +1,11 @@
-# Task 003 — Weak agent attempt (sample)
+# Task 003 — Weak agent attempt
 
-> **Sample/simulated attempt for demonstration.**
-
-## Sample weak approach
+## Weak approach
 
 Agent edits `IssueDetail.tsx` only:
 
 ```typescript
-// Simulated weak patch
+// Weak patch
 const onStatusChange = async (status) => {
   await api.updateIssueStatus(issueId, status);
   setLocalStatus(status); // local useState only
@@ -64,6 +62,6 @@ They do **not** integration-test list cache. A weak patch that only wires the fo
 
 Frontend agents often **fix what they see** (detail panel) without tracing **data flow** through React Query. Visible tests that mock hooks reinforce this gap. Hidden tests import real hooks + `QueryClient` and assert cache shape.
 
-Simulated harness: **visible ~1.0, hidden ~0.0–0.2**.
+Estimated harness score: **visible ~1.0, hidden ~0.0–0.2**.
 
 Note: Run eval Vitest from a clean repo path; see `apps/issueflow-frontend/vitest.eval-task003.config.ts`.

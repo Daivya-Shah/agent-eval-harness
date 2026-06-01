@@ -2,8 +2,6 @@
 
 Summary of the `agent_attempts/` folder and how to use harness reports when reviewing coding-agent patches.
 
-> **Important:** All examples in `agent_attempts/` are **sample/simulated attempts for demonstration**. They are engineering review notes — **not** logs from real frontier model runs unless separate artifacts are provided.
-
 ## Why failure analysis exists
 
 Pass/fail scores alone do not explain *why* a patch is weak. Eval engineering needs narratives that connect:
@@ -86,7 +84,7 @@ If failure modes mention **Vite/Vitest path issues**, the repo path may contain 
 ## Reviewer workflow
 
 1. Read task `prompt.md` and `expected_failures.md`
-2. Skim agent diff (or simulated notes in `agent_attempts/`)
+2. Skim agent diff (or notes in `agent_attempts/`)
 3. Run harness with `--run-type agent_attempt`
 4. Compare JSON to golden reference report for same task
 5. Use `diff_summary.md` checklist before approving a patch

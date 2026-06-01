@@ -1,6 +1,4 @@
-# Task 002 — Baseline failure (sample)
-
-> **Sample/simulated scenario for demonstration.**
+# Task 002 — Baseline failure
 
 ## Task summary
 

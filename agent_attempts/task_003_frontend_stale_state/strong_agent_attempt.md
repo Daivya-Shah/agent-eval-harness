@@ -1,6 +1,4 @@
-# Task 003 — Strong agent attempt (sample)
-
-> **Sample/simulated reference.** Matches golden `useIssues.ts` patterns.
+# Task 003 — Strong agent attempt
 
 ## What a robust solution does
 

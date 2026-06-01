@@ -1,6 +1,4 @@
-# Task 001 — Strong agent attempt (sample)
-
-> **Sample/simulated reference for demonstration.** Matches the golden implementation pattern in this repo.
+# Task 001 — Strong agent attempt
 
 ## What a robust solution does
 

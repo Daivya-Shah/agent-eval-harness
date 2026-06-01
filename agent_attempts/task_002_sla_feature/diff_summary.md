@@ -1,4 +1,4 @@
-# Task 002 — Diff summary (sample)
+# Task 002 — Diff summary
 
 ## Likely files — weak solution
 

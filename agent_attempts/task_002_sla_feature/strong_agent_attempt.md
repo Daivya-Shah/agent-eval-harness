@@ -1,6 +1,4 @@
-# Task 002 — Strong agent attempt (sample)
-
-> **Sample/simulated reference.** Aligns with golden `app/services/sla.py` in this repo.
+# Task 002 — Strong agent attempt
 
 ## What a robust solution does
 

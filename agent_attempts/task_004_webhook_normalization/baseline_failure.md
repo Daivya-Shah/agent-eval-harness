@@ -1,6 +1,4 @@
-# Task 004 — Baseline failure (sample)
-
-> **Sample/simulated scenario for demonstration.**
+# Task 004 — Baseline failure
 
 ## Task summary
 

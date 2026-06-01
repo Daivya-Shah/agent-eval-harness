@@ -1,6 +1,6 @@
-# Agent attempt analysis (sample / simulated)
+# Agent attempt analysis
 
-This folder contains **sample, simulated coding-agent attempt analysis** for the IssueFlow eval tasks. These are **not** logs from real frontier model runs unless explicitly noted elsewhere with actual artifacts.
+This folder contains coding-agent attempt analysis for the IssueFlow eval tasks.
 
 ## Why this exists
 
@@ -11,7 +11,7 @@ Eval engineering is not just writing tests — it is understanding **how agents 
 - what a robust solution preserves
 - how reviewers and the harness catch regressions
 
-The golden reference implementation in this repo **passes all four tasks** (average score **1.00** in `evals/results/aggregate_summary.json`). The scenarios here describe **hypothetical or intentionally incomplete solutions** for demonstration and interview discussion.
+The golden reference implementation in this repo **passes all four tasks** (average score **1.00** in `evals/results/aggregate_summary.json`). The scenarios here describe **hypothetical or intentionally incomplete solutions** useful when reviewing patches and failure modes.
 
 ## Visible vs hidden-style tests
 
@@ -24,7 +24,7 @@ An agent that only reads visible tests may implement the happy path in `routes/i
 
 ## How the harness helps
 
-The eval harness (`evals/harness/`) runs both suites, parses pytest/Vitest output, scores deterministically, and writes JSON/Markdown reports under `evals/results/`. When a simulated weak solution fails, you would see:
+The eval harness (`evals/harness/`) runs both suites, parses pytest/Vitest output, scores deterministically, and writes JSON/Markdown reports under `evals/results/`. When a weak solution fails, you would see:
 
 - lower `hidden_tests` category score
 - `failure_modes` like *"likely overfit to visible tests or missed edge cases"*

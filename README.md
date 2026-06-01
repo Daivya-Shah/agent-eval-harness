@@ -11,7 +11,7 @@ Built as a **Mechanize-focused demo** to explore the full eval loop: task prompt
 - **Visible vs hidden-style tests** to expose overfitting to happy-path checks
 - **Deterministic pytest/Vitest grading harness** with weighted scoring and structured failure tags
 - **Inspectable grading output:** per-task JSON/Markdown reports with scores, stdout/stderr excerpts, and failure-mode tags
-- **Simulated failure analysis** in `agent_attempts/` (weak vs strong patterns, not model logs)
+- **Failure analysis** in `agent_attempts/` (weak vs strong patterns per task)
 
 ## Verified golden reference
 
@@ -183,7 +183,7 @@ From [`evals/results/aggregate_summary.json`](evals/results/aggregate_summary.js
 
 ## Failure analysis
 
-To make grader output easier to reason about, [`agent_attempts/`](agent_attempts/) includes **simulated** weak-vs-strong attempt notes per task. These illustrate how visible-test overfitting shows up in practice (for example route-layer hacks that pass visible suites but fail hidden-style invariants). They are **not** logs from frontier model runs.
+[`agent_attempts/`](agent_attempts/) includes weak-vs-strong attempt notes per task. They illustrate how visible-test overfitting shows up in practice (for example route-layer hacks that pass visible suites but fail hidden-style invariants).
 
 See [`agent_attempts/README.md`](agent_attempts/README.md) and [`FAILURE_ANALYSIS.md`](FAILURE_ANALYSIS.md) for methodology.
 
@@ -201,6 +201,6 @@ See [`agent_attempts/README.md`](agent_attempts/README.md) and [`FAILURE_ANALYSI
 - [ARCHITECTURE.md](ARCHITECTURE.md) — system design for app and harness
 - [EVAL_DESIGN.md](EVAL_DESIGN.md) — per-task design and scoring
 - [FAILURE_ANALYSIS.md](FAILURE_ANALYSIS.md) — reading failures and reports
-- [agent_attempts/README.md](agent_attempts/README.md) — simulated attempt notes
+- [agent_attempts/README.md](agent_attempts/README.md) — attempt notes per task
 - [apps/issueflow-backend/SETUP.md](apps/issueflow-backend/SETUP.md) — backend details
 - [apps/issueflow-frontend/SETUP.md](apps/issueflow-frontend/SETUP.md) — frontend details

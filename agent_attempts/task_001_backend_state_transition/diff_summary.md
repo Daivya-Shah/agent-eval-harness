@@ -1,6 +1,4 @@
-# Task 001 — Diff summary (sample)
-
-> **Sample reviewer checklist.** File paths refer to the IssueFlow repo layout.
+# Task 001 — Diff summary
 
 ## Likely files — weak solution
 

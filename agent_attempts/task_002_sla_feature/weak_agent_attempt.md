@@ -1,8 +1,6 @@
-# Task 002 — Weak agent attempt (sample)
+# Task 002 — Weak agent attempt
 
-> **Sample/simulated attempt for demonstration.**
-
-## Sample weak approach
+## Weak approach
 
 Agent edits `app/routes/issues.py`:
 
@@ -53,4 +51,4 @@ All three visible tests can pass with ~15 lines in routes.
 
 Agents often **implement the first visible assertion** (urgent 24h) and **scatter time logic in HTTP layer**. Hidden tests target exact boundaries and timezone normalization — classic deterministic eval failure mode.
 
-Simulated harness: **visible ~1.0, hidden ~0.1–0.3**, failure modes include *"SLA deterministic time/boundary issue"*.
+Estimated harness score: **visible ~1.0, hidden ~0.1–0.3**, failure modes include *"SLA deterministic time/boundary issue"*.

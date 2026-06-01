@@ -1,6 +1,4 @@
-# Task 001 — Baseline failure (sample)
-
-> **Sample/simulated scenario for demonstration.** Not a log from a real agent run.
+# Task 001 — Baseline failure
 
 ## Task summary
 

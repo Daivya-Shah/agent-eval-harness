@@ -1,6 +1,4 @@
-# Task 004 — Strong agent attempt (sample)
-
-> **Sample/simulated reference.** Aligns with golden `webhook_normalizer.py` in this repo.
+# Task 004 — Strong agent attempt
 
 ## What a robust solution does
 

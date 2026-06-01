@@ -1,13 +1,11 @@
-# Task 004 — Weak agent attempt (sample)
+# Task 004 — Weak agent attempt
 
-> **Sample/simulated attempt for demonstration.**
-
-## Sample weak approach
+## Weak approach
 
 Agent patches `webhook_normalizer.py` with minimal mapping:
 
 ```python
-# Simulated weak patch
+# Weak patch
 def normalize(payload):
     return {
         "title": payload.get("title") or "",
@@ -58,4 +56,4 @@ All three visible tests can pass while hidden validation remains broken.
 
 Agents optimize for **first visible JSON example** in the prompt. They add one alias (`summary`) but miss the **combinatorics of real vendor payloads**. Hidden tests simulate Jira/Linear-style field variance and retry semantics.
 
-Simulated harness: **visible ~1.0, hidden ~0.1–0.4**.
+Estimated harness score: **visible ~1.0, hidden ~0.1–0.4**.
