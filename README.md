@@ -4,7 +4,7 @@ Built as a demo project for [Mechanize](https://www.mechanize.work/) because I r
 
 This is a small eval harness for coding agents, built around **IssueFlow**, a full-stack issue tracker (FastAPI + SQLite, React on the front) that acts as the real codebase agents edit. The tasks are scoped to normal backend, frontend, and integration work, not one-off puzzle files.
 
-I put it together as a **Mechanize-focused demo** to walk through the full loop: task prompt, target codebase, visible tests, hidden-style tests, deterministic grading, and failure analysis. The part I care about most is the gap agents often hit: they pass the shallow, visible tests and still miss deeper invariants (state machines, time boundaries, cache consistency, idempotency, that kind of thing).
+I put this together to walk through the full loop: task prompt, target codebase, visible tests, hidden-style tests, deterministic grading, and failure analysis. The part I care about most is the gap agents often hit: they pass the shallow, visible tests and still miss deeper invariants (state machines, time boundaries, cache consistency, idempotency, that kind of thing).
 
 ## What this demonstrates
 
