@@ -12,9 +12,9 @@ def seed_database(db: Session) -> None:
     if crud.list_users(db):
         return
 
-    alice = crud.create_user(db, email="alice@issueflow.dev", name="Alice Chen")
-    bob = crud.create_user(db, email="bob@issueflow.dev", name="Bob Martinez")
-    carol = crud.create_user(db, email="carol@issueflow.dev", name="Carol Singh")
+    tamay = crud.create_user(db, email="tamay@issueflow.dev", name="Tamay Besiroglu")
+    matthew = crud.create_user(db, email="matthew@issueflow.dev", name="Matthew Barnett")
+    ege = crud.create_user(db, email="ege@issueflow.dev", name="Ege Erdil")
 
     now = datetime.now(UTC)
 
@@ -23,21 +23,21 @@ def seed_database(db: Session) -> None:
             title="Login timeout on mobile Safari",
             description="Users report session expiry after 30 seconds on iOS Safari.",
             priority=IssuePriority.URGENT,
-            assignee_id=alice.id,
+            assignee_id=tamay.id,
             due_at=now + timedelta(hours=12),
         ),
         IssueCreate(
             title="Export CSV missing assignee column",
             description="CSV export omits assignee for filtered views.",
             priority=IssuePriority.HIGH,
-            assignee_id=bob.id,
+            assignee_id=matthew.id,
             due_at=now + timedelta(days=2),
         ),
         IssueCreate(
             title="Dark mode contrast on comment threads",
             description="Comment text fails WCAG AA in dark theme.",
             priority=IssuePriority.MEDIUM,
-            assignee_id=carol.id,
+            assignee_id=ege.id,
             due_at=now + timedelta(days=5),
         ),
         IssueCreate(
@@ -63,8 +63,12 @@ def seed_database(db: Session) -> None:
     crud.update_issue_status(
         db, crud.get_issue(db, issue_ids[1]), IssueStatusUpdate(status=IssueStatus.BLOCKED)
     )
+    issue_three = crud.get_issue(db, issue_ids[2])
     crud.update_issue_status(
-        db, crud.get_issue(db, issue_ids[2]), IssueStatusUpdate(status=IssueStatus.RESOLVED)
+        db, issue_three, IssueStatusUpdate(status=IssueStatus.IN_PROGRESS)
+    )
+    crud.update_issue_status(
+        db, issue_three, IssueStatusUpdate(status=IssueStatus.RESOLVED)
     )
 
     # Add sample comments
@@ -73,10 +77,10 @@ def seed_database(db: Session) -> None:
     crud.add_comment(
         db,
         crud.get_issue(db, issue_ids[0]),
-        CommentCreate(author_id=bob.id, body="Reproduced on iOS 17.4 — investigating cookie SameSite settings."),
+        CommentCreate(author_id=matthew.id, body="Reproduced on iOS 17.4 — investigating cookie SameSite settings."),
     )
     crud.add_comment(
         db,
         crud.get_issue(db, issue_ids[2]),
-        CommentCreate(author_id=alice.id, body="Fixed contrast ratio in comment panel CSS."),
+        CommentCreate(author_id=tamay.id, body="Fixed contrast ratio in comment panel CSS."),
     )
